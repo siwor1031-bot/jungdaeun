@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정다은 — Data Product Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#3182f6;--blue-bg:rgba(49,130,246,.04);--blue-border:rgba(49,130,246,.1);--black:#0e1111;--gray-50:#fafbfc;--gray-100:#f4f5f7;--gray-200:#e8ebed;--gray-300:#d1d6db;--gray-500:#8b95a1;--gray-700:#4e5968;--gray-900:#1b1d1f;--radius:16px;--font:'Inter',-apple-system,'Pretendard',sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:#fff;color:var(--gray-700);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased;letter-spacing:-.2px}
+::selection{background:rgba(49,130,246,.08)}
+.wrap{max-width:580px;margin:0 auto;padding:0 24px}
+
+/* ─── WHY ─── */
+.why{padding:120px 0 64px;text-align:center}
+.why .ey{font-size:.65rem;font-weight:700;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.why h1{font-size:1.5rem;font-weight:800;color:var(--black);letter-spacing:-.8px;line-height:1.45;margin-bottom:40px}
+.why-cards{text-align:left;border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;margin-bottom:36px}
+.wc{padding:22px 24px;border-bottom:1px solid var(--gray-200)}
+.wc:last-child{border-bottom:none}
+.wc-n{font-size:.6rem;font-weight:700;color:var(--blue);letter-spacing:1px;margin-bottom:4px}
+.wc-t{font-size:.9rem;font-weight:700;color:var(--black);margin-bottom:4px}
+.wc-d{font-size:.8rem;color:var(--gray-500);line-height:1.7}
+.why-nums{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--gray-200);border-radius:12px;overflow:hidden}
+.wn{text-align:center;padding:18px 8px;border-right:1px solid var(--gray-200)}
+.wn:last-child{border-right:none}
+.wn .v{font-size:1.3rem;font-weight:800;color:var(--black);letter-spacing:-.5px}
+.wn .l{font-size:.62rem;color:var(--gray-500);margin-top:2px}
+
+/* ─── SECTION ─── */
+.sec{padding:56px 0;border-top:1px solid var(--gray-200)}
+.sec-ey{font-size:.62rem;font-weight:700;color:var(--gray-500);letter-spacing:.5px;margin-bottom:6px}
+.sec-ey.star{color:var(--blue);font-size:.68rem}
+.sec h2{font-size:1.15rem;font-weight:700;color:var(--black);letter-spacing:-.5px;margin-bottom:3px}
+.sec .period{font-size:.72rem;color:var(--gray-300);margin-bottom:24px}
+
+/* ─── FLOW ─── */
+.flow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--gray-200);border-radius:14px;overflow:hidden;margin-bottom:24px}
+.fc{padding:20px 14px;background:#fff}
+.fc.problem{background:var(--gray-50)}
+.fc.approach{background:var(--blue-bg)}
+.fc.result{background:var(--black)}
+.fc .fl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.fc.problem .fl{color:var(--gray-400,#b0b8c1)}
+.fc.approach .fl{color:var(--blue)}
+.fc.result .fl{color:rgba(255,255,255,.4)}
+.fc .ft{font-size:.78rem;font-weight:500;color:var(--gray-900);line-height:1.65}
+.fc.result .ft{color:#fff;font-weight:600}
+
+/* ─── METRICS ─── */
+.mets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.met{padding:18px 8px;text-align:center;background:var(--gray-50);border-radius:12px}
+.met .mv{font-size:1.3rem;font-weight:800;color:var(--blue);letter-spacing:-.5px}
+.met .mv.dim{color:var(--gray-300)}
+.met .ml{font-size:.6rem;color:var(--gray-500);margin-top:2px}
+
+/* ─── CHART ─── */
+.chart{padding:20px;background:var(--gray-50);border-radius:14px;margin-bottom:20px}
+.chart h4{font-size:.65rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+.br{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.br:last-of-type{margin-bottom:0}
+.br .bl{font-size:.72rem;color:var(--gray-500);width:56px;text-align:right;flex-shrink:0}
+.br .bt{flex:1;height:24px;background:var(--gray-100);border-radius:6px;position:relative;overflow:hidden}
+.br .bf{height:100%;border-radius:6px;position:absolute;left:0;top:0}
+.br .bf.base{background:var(--gray-200)}
+.br .bf.on{background:var(--blue)}
+.br .bv{font-size:.72rem;font-weight:700;color:var(--blue);width:32px;flex-shrink:0}
+.chart .legend{display:flex;gap:12px;margin-top:12px;font-size:.62rem;color:var(--gray-500)}
+.chart .legend span{display:flex;align-items:center;gap:3px}
+.chart .legend span::before{content:'';width:8px;height:8px;border-radius:2px}
+.chart .legend .la::before{background:var(--blue)}
+.chart .legend .lb::before{background:var(--gray-200)}
+
+/* ─── REPORT ─── */
+.report{border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden;margin-bottom:20px}
+.rp-head{padding:16px 20px;background:var(--gray-50);border-bottom:1px solid var(--gray-200);display:flex;align-items:center;justify-content:space-between}
+.rp-head .rh-t{font-size:.75rem;font-weight:600;color:var(--gray-900)}
+.rp-head .rh-b{font-size:.58rem;font-weight:600;color:var(--blue);background:var(--blue-bg);border:1px solid var(--blue-border);padding:2px 7px;border-radius:5px}
+.rp-item{padding:20px;border-bottom:1px solid var(--gray-200)}
+.rp-item:last-child{border-bottom:none}
+.ri-top{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.ri-badge{font-size:.58rem;font-weight:700;color:#fff;padding:2px 7px;border-radius:4px}
+.ri-badge.atk{background:var(--blue)}
+.ri-badge.def{background:var(--black)}
+.ri-title{font-size:.85rem;font-weight:700;color:var(--gray-900)}
+.ri-table{border:1px solid var(--gray-200);border-radius:8px;overflow:hidden}
+.ri-row{display:grid;grid-template-columns:72px 1fr;border-bottom:1px solid var(--gray-200)}
+.ri-row:last-child{border-bottom:none}
+.ri-tag{padding:9px 10px;background:var(--blue-bg);font-size:.62rem;font-weight:700;color:var(--blue);border-right:1px solid var(--gray-200);display:flex;align-items:center}
+.ri-val{padding:9px 12px;font-size:.78rem;color:var(--gray-900);font-weight:500;display:flex;align-items:center}
+
+/* ─── BEFORE/AFTER ─── */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-200);border-radius:14px;overflow:hidden;margin-bottom:20px}
+.ba .s{padding:20px 18px}
+.ba .bef{background:var(--gray-50)}
+.ba .aft{background:var(--blue-bg)}
+.ba .sl{font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.ba .bef .sl{color:var(--gray-300)}
+.ba .aft .sl{color:var(--blue)}
+.ba .s p{font-size:.78rem;line-height:1.85}
+.ba .bef p{color:var(--gray-500)}
+.ba .aft p{color:var(--gray-900);font-weight:500}
+
+/* ─── INSIGHT ─── */
+.ins{padding:16px 20px;border-left:2px solid var(--blue);margin-bottom:20px;font-size:.82rem;color:var(--gray-700);line-height:1.9}
+.ins strong{color:var(--black)}
+.ins .hl{color:var(--blue);font-weight:600}
+
+/* ─── SIGNAL HIGHLIGHT ─── */
+.signal-hero{margin-bottom:24px;padding:28px 24px;background:var(--black);border-radius:var(--radius);text-align:center}
+.signal-hero .sh-ey{font-size:.6rem;font-weight:700;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.signal-hero .sh-nums{display:flex;justify-content:center;align-items:baseline;gap:12px;margin-bottom:8px}
+.signal-hero .sh-from{font-size:1.8rem;font-weight:300;color:var(--gray-500);letter-spacing:-1px}
+.signal-hero .sh-arrow{font-size:1rem;color:var(--gray-500)}
+.signal-hero .sh-to{font-size:2.4rem;font-weight:900;color:#fff;letter-spacing:-1px}
+.signal-hero .sh-msg{font-size:.78rem;color:var(--gray-500);margin-top:4px}
+
+/* ─── CLOSING ─── */
+.closing{padding:56px 0 36px;border-top:1px solid var(--gray-200)}
+.closing h2{font-size:1.1rem;font-weight:700;color:var(--black);margin-bottom:14px;letter-spacing:-.5px}
+.closing p{font-size:.85rem;color:var(--gray-500);line-height:2;margin-bottom:8px}
+.closing .hl{color:var(--blue);font-weight:600}
+.props{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:24px 0}
+.prop{padding:16px 12px;text-align:center;border-radius:12px;background:var(--blue-bg);border:1px solid var(--blue-border)}
+.prop .pt{font-size:.72rem;font-weight:700;color:var(--blue);margin-bottom:3px}
+.prop .pd{font-size:.65rem;color:var(--gray-500);line-height:1.5}
+.final{margin-top:28px;padding:24px;background:var(--black);border-radius:var(--radius);text-align:center}
+.final p{font-size:.88rem;font-weight:500;color:#fff;line-height:1.9;margin:0}
+.final .hl{color:var(--blue)}
+
+footer{padding:32px 0;text-align:center;font-size:.68rem;color:var(--gray-300)}
+
+/* ─── ANIMATION ─── */
+.reveal{opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:600px){
+.wrap{padding:0 20px}
+.why{padding:88px 0 48px}
+.why h1{font-size:1.3rem}
+.why-nums{grid-template-columns:repeat(3,1fr)}
+.flow{grid-template-columns:1fr}
+.fc{border-bottom:1px solid var(--gray-200)}
+.mets{grid-template-columns:1fr 1fr}
+.ba{grid-template-columns:1fr}
+.props{grid-template-columns:1fr}
+.signal-hero .sh-from{font-size:1.4rem}
+.signal-hero .sh-to{font-size:1.8rem}
+}
+@media print{*{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;overflow:visible!important}.reveal{opacity:1!important;transform:none!important}.wrap{padding:0 16px;max-width:100%}.sec{page-break-inside:avoid;break-inside:avoid}.flow{page-break-inside:avoid;break-inside:avoid;overflow:visible!important}.why-cards{page-break-inside:avoid;break-inside:avoid;overflow:visible!important}.why-nums{page-break-inside:avoid;break-inside:avoid;overflow:visible!important}.report{page-break-inside:avoid;break-inside:avoid;overflow:visible!important}.ba{page-break-inside:avoid;break-inside:avoid;overflow:visible!important}.ri-table{overflow:visible!important}.sec h2{page-break-after:avoid;break-after:avoid}html,body{height:auto!important;overflow:visible!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════ -->
+<!-- WHY, 정다은 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="why reveal">
+<div class="ey">WHY, 정다은</div>
+<h1>데이터는 많았습니다.<br><br>하지만<br>바로 움직일 수 있는 기준은<br>없었습니다.</h1>
+
+<div class="why-cards">
+<div class="wc"><div class="wc-n">01</div><div class="wc-t">분석가가 없으면 아무것도 안 돌아갔습니다</div><div class="wc-d">세일즈가 직접 판단할 수 있는 구조를 만들었습니다.</div></div>
+<div class="wc"><div class="wc-n">02</div><div class="wc-t">복잡한 건 제거했습니다</div><div class="wc-d">10,256개 → 실행 가능한 ~300개만 남겼습니다.</div></div>
+<div class="wc"><div class="wc-n">03</div><div class="wc-t">설계에서 끝나면 의미 없습니다</div><div class="wc-d">실제로 돌아가는 상태까지 만듭니다.</div></div>
+</div>
+
+<div class="why-nums">
+<div class="wn"><div class="v">8yr+</div><div class="l">데이터 프로덕트 + 금융</div></div>
+<div class="wn"><div class="v">3,400만</div><div class="l">유저 행동 데이터</div></div>
+<div class="wn"><div class="v">단독 수행</div><div class="l">정의 → 검증 → 운영</div></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- 01: 구매임박 -->
+<!-- ═══════════════════════════════════════ -->
+<div class="sec reveal">
+<div class="sec-ey">01 — Audience Design</div>
+<h2>구매임박 오디언스</h2>
+<div class="period">2023~ 운영 중</div>
+
+<div class="flow">
+<div class="fc problem"><div class="fl">Problem</div><div class="ft">"누가 살까"로는<br>타이밍을 못 잡는다</div></div>
+<div class="fc approach"><div class="fl">Approach</div><div class="ft">"언제 살까"로 전환<br>Spike Score 설계</div></div>
+<div class="fc result"><div class="fl">Result</div><div class="ft">전환율 2–7×<br>매시간 자동 운영</div></div>
+</div>
+
+<div class="mets">
+<div class="met"><div class="mv">2–7×</div><div class="ml">전환율</div></div>
+<div class="met"><div class="mv">428</div><div class="ml">실시간 카테고리</div></div>
+<div class="met"><div class="mv">19</div><div class="ml">커머스 앱</div></div>
+</div>
+
+<div class="chart">
+<h4>카테고리별 전환율</h4>
+<div class="br"><span class="bl">스킨케어</span><div class="bt"><div class="bf base" style="width:15%"></div><div class="bf on" style="width:55%"></div></div><span class="bv">11%</span></div>
+<div class="br"><span class="bl">여성의류</span><div class="bt"><div class="bf base" style="width:12%"></div><div class="bf on" style="width:36%"></div></div><span class="bv">7.2%</span></div>
+<div class="br"><span class="bl">건강식품</span><div class="bt"><div class="bf base" style="width:14%"></div><div class="bf on" style="width:44%"></div></div><span class="bv">8.8%</span></div>
+<div class="br"><span class="bl">에어컨</span><div class="bt"><div class="bf base" style="width:8%"></div><div class="bf on" style="width:26%"></div></div><span class="bv">5.1%</span></div>
+<div class="legend"><span class="la">Spike Score</span><span class="lb">일반</span></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- 02: App Maker -->
+<!-- ═══════════════════════════════════════ -->
+<div class="sec reveal">
+<div class="sec-ey">02 — Sales Automation</div>
+<h2>App Maker — 피칭 근거 자동화</h2>
+<div class="period">2025~ 운영 중</div>
+
+<div class="flow">
+<div class="fc problem"><div class="fl">Problem</div><div class="ft">"왜 이 타겟인지"<br>기준 부재 · 분석가 병목</div></div>
+<div class="fc approach"><div class="fl">Approach</div><div class="ft">WHY·BEHAVIOR·TARGET<br>3단 근거 자동 생성</div></div>
+<div class="fc result"><div class="fl">Result</div><div class="ft">수일 → 수분<br>조직 자체 의사결정</div></div>
+</div>
+
+<div class="report">
+<div class="rp-head"><span class="rh-t">Kia App — 피칭 근거</span><span class="rh-b">AUTO-GENERATED</span></div>
+<div class="rp-item">
+<div class="ri-top"><span class="ri-badge atk">공격</span><span class="ri-title">Tesla·KGM 교차 사용자</span></div>
+<div class="ri-table">
+<div class="ri-row"><div class="ri-tag">WHY</div><div class="ri-val">선택 고민 단계 — 전환 가능성 높음</div></div>
+<div class="ri-row"><div class="ri-tag">BEHAVIOR</div><div class="ri-val">사용일수 2.3×, 이용시간 2.8×</div></div>
+<div class="ri-row"><div class="ri-tag">TARGET</div><div class="ri-val">최근 30일 교차 사용자</div></div>
+</div>
+</div>
+<div class="rp-item">
+<div class="ri-top"><span class="ri-badge def">방어</span><span class="ri-title">Kia↓ Tesla↑ 유저</span></div>
+<div class="ri-table">
+<div class="ri-row"><div class="ri-tag">WHY</div><div class="ri-val">이탈 임박 — Kia 사용 급감</div></div>
+<div class="ri-row"><div class="ri-tag">BEHAVIOR</div><div class="ri-val">사용일수 20.1 → 8.6일</div></div>
+<div class="ri-row"><div class="ri-tag">TARGET</div><div class="ri-val">이용시간 60%↓ 사용자</div></div>
+</div>
+</div>
+</div>
+
+<div class="ba">
+<div class="s bef"><div class="sl">Before</div><p>"감"으로 제안<br>분석가 요청 후 수일 대기</p></div>
+<div class="s aft"><div class="sl">After</div><p>앱 입력 → 근거 자동 생성<br>세일즈 자체 의사결정</p></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- 03: SIGNAL (대표 프로젝트 — 강조) -->
+<!-- ═══════════════════════════════════════ -->
+<div class="sec reveal">
+<div class="sec-ey star">★ 대표 프로젝트</div>
+<h2>SIGNAL — 전사 세일즈 데이터 프레임워크</h2>
+<div class="period">2026~ 진행 중</div>
+
+<div class="signal-hero">
+<div class="sh-ey">복잡함 제거</div>
+<div class="sh-nums">
+<span class="sh-from">10,256</span>
+<span class="sh-arrow">→</span>
+<span class="sh-to">~300</span>
+</div>
+<div class="sh-msg">해석이 필요한 태그 → 바로 판단 가능한 전략 단위</div>
+</div>
+
+<div class="flow">
+<div class="fc problem"><div class="fl">Problem</div><div class="ft">10,256개 태그<br>사람이 해석해야 사용 가능<br>업종별 차별화 불가</div></div>
+<div class="fc approach"><div class="fl">Approach</div><div class="ft">업종 중심 재구조화<br>운영 불가능한 조합 제거<br>모수·비용 현실 검증</div></div>
+<div class="fc result"><div class="fl">Result</div><div class="ft">~300 전략 단위<br>바로 판단 가능<br>분석가 의존 제거</div></div>
+</div>
+
+<div class="mets">
+<div class="met"><div class="mv dim">10,256</div><div class="ml">기존 태그</div></div>
+<div class="met"><div class="mv">~300</div><div class="ml">운영 가능 S-Tag</div></div>
+<div class="met"><div class="mv">8×21</div><div class="ml">소비맥락 × 업종</div></div>
+</div>
+
+<div class="ba">
+<div class="s bef"><div class="sl">Before</div><p>"임신맘 85만명한테 보여주세요"<br>업종 무관 동일 제안<br>전략 차별화 불가</p></div>
+<div class="s aft"><div class="sl">After</div><p>"재구매맘 3주주기 / 앱충성맘"<br>업종별 전략 자동 매칭<br>세일즈팀 자체 의사결정</p></div>
+</div>
+
+<div class="ins">
+<strong>핵심:</strong> 태그를 줄인 게 아닙니다.<br>
+<span class="hl">사람이 해석해야 하는 구조</span>를 <span class="hl">바로 판단 가능한 구조</span>로 바꾼 것.
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- CLOSING -->
+<!-- ═══════════════════════════════════════ -->
+<div class="closing reveal">
+<h2>제가 풀어온 문제</h2>
+<p>6년간 같은 문제를 풀어왔습니다.<br><span class="hl">데이터는 쌓이는데, 조직이 바로 움직일 수 있는 기준이 없는 상태.</span></p>
+
+<div class="props">
+<div class="prop"><div class="pt">구조 설계</div><div class="pd">복잡한 데이터를<br>판단 가능한 단위로</div></div>
+<div class="prop"><div class="pt">자동화</div><div class="pd">분석가 병목 제거<br>조직 자체 의사결정</div></div>
+<div class="prop"><div class="pt">검증</div><div class="pd">설계에서 끝나지 않고<br>실제 운영까지</div></div>
+</div>
+
+<div class="final">
+<p>저는 데이터를 분석하는 사람이 아닙니다.<br><span class="hl">조직이 분석가 없이도 움직이는 구조</span>를 만드는 사람입니다.</p>
+</div>
+</div>
+
+<footer>© 2026 정다은 · jde1031@naver.com</footer>
+
+</div>
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
