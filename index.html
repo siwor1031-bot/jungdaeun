@@ -102,8 +102,14 @@ body{font-family:var(--font);background:#fff;color:var(--gray-700);line-height:1
 .p3-insight .hl{color:var(--blue);font-weight:600}
 
 /* ─── CLOSING ─── */
-.closing{padding:80px 0 48px;border-top:1px solid var(--gray-200);text-align:center}
-.closing .final{max-width:600px;margin:0 auto;padding:36px;background:var(--black);border-radius:var(--radius)}
+.closing{padding:80px 0 48px;border-top:1px solid var(--gray-200)}
+.closing h2{text-align:center}
+.transfer{max-width:720px;margin:0 auto 36px}
+.tf-row{display:grid;grid-template-columns:1fr 1.5fr;gap:0;margin-bottom:1px}
+.tf-if{padding:20px 24px;background:var(--gray-50);border:1px solid var(--gray-200);border-right:none;border-radius:12px 0 0 12px;font-size:.85rem;color:var(--gray-500);font-weight:500;display:flex;align-items:center}
+.tf-then{padding:20px 24px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:0 12px 12px 0;font-size:.85rem;color:var(--gray-900);font-weight:600;display:flex;align-items:center;flex-direction:column;justify-content:center}
+.tf-proof{font-size:.72rem;color:var(--blue);font-weight:500;margin-top:4px}
+.closing .final{max-width:600px;margin:0 auto;padding:36px;background:var(--black);border-radius:var(--radius);text-align:center}
 .closing .final p{font-size:1rem;font-weight:500;color:#fff;line-height:2}
 .closing .final .hl{color:var(--blue)}
 
@@ -258,6 +264,21 @@ WHY·BEHAVIOR·TARGET 3단 근거를 자동 생성.<br>
 <!-- CLOSING -->
 <!-- ═══════════════════════════════════════ -->
 <div class="closing reveal">
+<h2 style="font-size:1.3rem;font-weight:800;color:var(--black);margin-bottom:32px;letter-spacing:-.5px">당신의 조직에 이런 문제가 있다면</h2>
+<div class="transfer">
+<div class="tf-row">
+<div class="tf-if">데이터는 쌓이는데<br>전략이 안 나온다</div>
+<div class="tf-then">업종·맥락별 실행 단위로 재구조화합니다<br><span class="tf-proof">→ 10,256개 태그를 ~300개 전략 단위로 전환한 경험</span></div>
+</div>
+<div class="tf-row">
+<div class="tf-if">분석팀에 요청해야만<br>의사결정이 가능하다</div>
+<div class="tf-then">현업이 스스로 판단하는 시스템을 만듭니다<br><span class="tf-proof">→ 세일즈 자체 의사결정 도구 설계·운영 중</span></div>
+</div>
+<div class="tf-row">
+<div class="tf-if">타겟팅을 하는데<br>성과가 안 나온다</div>
+<div class="tf-then">지표의 질문 자체를 재정의합니다<br><span class="tf-proof">→ "누가"에서 "언제"로 전환, 전환율 2–7배</span></div>
+</div>
+</div>
 <div class="final">
 <p>저는 데이터를 분석하는 사람이 아닙니다.<br><span class="hl">조직이 분석가 없이도 움직이는 구조</span>를 만드는 사람입니다.</p>
 </div>
